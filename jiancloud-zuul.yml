@@ -1,0 +1,14 @@
+server:
+  port: 8075
+spring:
+  application:
+    name: jian-zuul
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,hystrix.stream,routes
+zuul:
+  prefix: /jsy
+  routes:
+    jian-blogs: /blogs/**
